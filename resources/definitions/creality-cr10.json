@@ -1,0 +1,72 @@
+
+
+{
+    "id": "creality-cr10",
+    "name": "Creality CR-10",
+    "version": 1,
+    "inherits": "fdmprinter.json",
+    
+    "metadata": {
+        "visible": true,
+        "author": "Creality",
+        "manufacturer": "Creality3D",
+        "category": "Other",
+    
+    },
+    
+    "machine_settings": {
+        "machine_width": {
+            "default": 300
+        },
+        "machine_height": {
+            "default": 400
+        },
+        "machine_depth": {
+            "default": 300
+        },
+        "machine_center_is_zero": {
+            "default": false
+        },
+        "machine_nozzle_size": {
+            "default": 0.4
+        },
+        "machine_head_shape_min_x": {
+            "default": 0
+        },
+        "machine_head_shape_min_y": {
+            "default": 0
+        },
+        "machine_head_shape_max_x": {
+            "default": 0
+        },
+        "machine_head_shape_max_y": {
+            "default": 0
+        },
+        "machine_nozzle_gantry_distance": {
+            "default": 0
+        },
+        "machine_nozzle_offset_x_1": {
+            "default": 0
+        },
+        "machine_nozzle_offset_y_1": {
+            "default": 0
+        },
+        "machine_gcode_flavor": {
+            "default": "RepRap (Marlin/Sprinter)"
+        },
+        "machine_start_gcode": {
+            "default": "G21 ;metric values\nG90 ;absolute Positioning\nG28 ; home all axes\nG1 Z5 F3000 ; lift\nG1 X20 Y2 F1500 ; avoid binder clips\nG1 Z0.2 F3000 ; get ready to prime\nG92 E0 ; reset extrusion distance\nG1 X120 E10 F600 ; prime nozzle\nG1 X150 F5000 ; quick wipe"
+        },
+        "machine_end_gcode": {
+            "default": "G91\nG1 F1800 E-3\nG1 F3000 Z10\nG90\nG28 X0 Y0 ; home x and y axis\nM106 S0 ; turn off cooling fan\nM104 S0 ; turn off extruder\nM140 S0 ; turn off bed\nM84 ; disable motors"
+        }
+    },
+    "categories": {
+        "material": {
+            "settings": {
+                "material_bed_temperature": {
+                    "visible": true
+                }
+            }
+        }
+    }
